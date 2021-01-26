@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: サイトURL#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クリスタ中級</title>
+    <meta name="description" content="クリスタ中級のコーディングです。" />
+    <!-- PC：120文字以内 スマホ：70文字以内 -->
+    <!-- ここからOGP -->
+    <meta property="og:url" content=" ページの URL" />
+    <meta property="og:type" content=" ページの種類" />
+    <!-- website /blog 下層→article -->
+    <meta property="og:title" content=" ページの タイトル" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content=" サムネイル画像の URL" />
+    <!-- /OGPここまで -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+
+  <body>
+    
+    <!-- ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁
+    　■　header 
+    ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ -->
+    <header class="header"> 
+      <div class="header__inner inner1200">
+
+        <!-- logo --> 
+        <div class="logo header__logo"> 
+          <h1>
+            <a href="./index.html">Cresta Design</a>
+          </h1>
+        </div><!-- /.logo header__logo -->
+
+        <!-- nav --> 
+        <nav class="nav"> 
+          <ul class="nav__items"> 
+        
+            <li class="nav__item"> 
+              <a href="" class="nav__link">Concept</a>
+            </li><!-- /.nav__item --> 
+        
+            <li class="nav__item"> 
+              <a href="" class="nav__link">Service</a>
+            </li><!-- /.nav__item --> 
+        
+            <li class="nav__item"> 
+              <a href="" class="nav__link">Works</a>
+            </li><!-- /.nav__item -->
+
+            <li class="nav__item"> 
+              <a href="contact.html" class="nav__link">Contact</a>
+            </li><!-- /.nav__item -->
+
+          </ul>
+        </nav><!-- /.nav -->
+
+        <!-- ハンバーガーボタン -->
+        <div class="hamburger">
+          <div class="hamburger__btn">
+            <span class="hamburger__line line--top"></span>
+            <span class="hamburger__line line--middle"></span>
+            <span class="hamburger__line line--bottom"></span>
+          </div>
+        </div>
+
+      </div><!-- /.header__inner --> 
+
+    </header><!-- /.header -->
+
+
+    <!-- ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁
+    　■　fv
+    ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ -->
+    <div class="fv">
+      <div class="inner1400">
+        <h2 class="page-title">Contact</h2>
+        <p class="page-title-bottom">Contact us</p>
+      </div>
+    </div>
+
+    <!-- ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁
+    　■　main
+    ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ -->
+    <main>
+      <div class="inner1200">
+        <form class="form" action="">
+
+          <div class="form__item">
+            <p class="form__inquiry">お問い合わせ内容</p>
+            <div class="form__checkboxes">
+              <label for="document-request">
+                <input id="document-request" type="checkbox">
+                <p>資料請求</p>
+              </label>
+              <label for="telephone-consultation">
+                <input id="telephone-consultation" type="checkbox">
+                <p>お電話でのご相談を希望</p>
+              </label>
+              <label for="application">
+                <input id="application" type="checkbox">
+                <p>申し込み</p>
+              </label>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="person">担当者名</label>
+            <input id="person" type="text">
+          </div>
+          <div class="form__item">
+            <label for="tel">電話番号</label>
+            <input id="tel" type="text">
+          </div>
+          <div class="form__item">
+            <label for="mail">メールアドレス</label>
+            <input id="mail" type="text">
+          </div>
+          <div class="form__item">
+            <label for="other">その他</label>
+            <textarea id="other" name="" id="" cols="30" rows="10"></textarea>
+          </div>
+
+          <button class="form__btn btn">Submit</button>
+
+        </form>
+      </div>
+    </main>
+
+
+  <!-- ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁
+  　∟　footer
+  ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ -->
+  <footer class="footer">
+    <p class="footer__copyright">©︎cresta.design all rights reserved</p>
+  </footer>
+
+  <!-- ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁
+  　∟　sp-nav
+  ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ ▷◁ -->
+  <div class="sp-nav">
+    <div class="sp-nav__bg">
+      <ul class="sp-nav__items">
+        <li class="sp-nav__item"><a href="">Concept</a></li>
+        <li class="sp-nav__item"><a href="">Service</a></li>
+        <li class="sp-nav__item"><a href="">Works</a></li>
+        <li class="sp-nav__item"><a href="">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="./js/script.js"></script>
+  </body>
+</html>

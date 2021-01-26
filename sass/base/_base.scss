@@ -1,0 +1,259 @@
+/* --------------------------------
+ * 変数管理
+ * -------------------------------- */
+/* 色 ----------- */
+$color-main: #3f51b5; // ベース色 
+$color-text: #171717; // テキスト色
+
+/* フォント ----------- */
+$font-default: "Noto Serif", "Noto Serif JP", serif; // 標準フォント
+$font-english: sans-serif;
+$font-base: $font-default;
+
+/* 余白 ----------- */
+$pc-padding: 50px;
+$tb-padding: 30px;
+$sp-padding: 15px;
+
+//*-------------------*
+//*  レスポンシブ定義
+//*-------------------*
+/* ブレイクポイント ----------- */
+$tb: 959px; // タブレット
+$sp: 699px; // スマホ
+
+/* メディアクエリ ----------- */
+/* PC */
+@mixin pc {
+    @media screen and (min-width: $tb + 1px) {
+      @content;
+    }
+}
+/* タブレット */
+@mixin tb {
+    @media screen and (max-width: $tb) {
+      @content;
+    }
+}
+/* スマホ */
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+
+/* --------------------------------
+ * font-size定義
+ * -------------------------------- */
+/* $sizeにpx表示を入れて使う */
+
+@mixin font($size) {
+    font-size: $size + px; // IE9以前に対応する
+    font-size: ($size / 16) + rem;
+}
+
+/* --------------------------------
+ * 補完クラス
+ * -------------------------------- */
+// PCだけ非表示
+.hidden-pc {
+	@include pc {
+		display: none;
+	}
+}
+
+// タブレットだけ非表示
+.hidden-tb {
+	@include tb {
+		display: none;
+	}
+}
+
+// スマホだけ非表示
+.hidden-sp {
+	@include sp {
+		display: none;
+    }
+}
+
+/* --------------------------------
+ * base(共通)
+ * -------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: $color-text;
+    @include font(16);
+    font-family: $font-base;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+// インナーサイズ1000px
+.inner1000 {
+    max-width: calc(1000px + #{$pc-padding} * 2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $pc-padding;
+    padding-left: $pc-padding;
+
+    @include tb {
+        max-width: calc(700px + #{$pc-padding} * 2);
+        padding-right: $tb-padding;
+        padding-left: $tb-padding;
+    }
+
+    @include sp {
+        max-width: 100%;
+        padding-right: 28px;
+        padding-left: 28px;
+    }
+}
+
+// インナーサイズ1200px
+.inner1200 {
+    max-width: calc(1200px + #{$pc-padding} * 2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $pc-padding;
+    padding-left: $pc-padding;
+
+    @include tb {
+        max-width: calc(700px + #{$pc-padding} * 2);
+        padding-right: $tb-padding;
+        padding-left: $tb-padding;
+    }
+
+    @include sp {
+        max-width: 100%;
+        padding-right: $sp-padding;
+        padding-left: $sp-padding;
+    }
+}
+
+// インナーサイズ1400px
+.inner1400 {
+    max-width: calc(1400px + #{$pc-padding} * 2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $pc-padding;
+    padding-left: $pc-padding;
+
+    @include tb {
+        max-width: calc(700px + #{$pc-padding} * 2);
+        padding-right: $tb-padding;
+        padding-left: $tb-padding;
+    }
+
+    @include sp {
+        max-width: 100%;
+        padding-right: $sp-padding;
+        padding-left: $sp-padding;
+    }
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+    @include sp {
+        padding-bottom: 40px;
+    }
+}
+
+.section-title {
+    margin-bottom: 80px;
+    font: italic normal bold 60px/24px Noto Serif;
+    color: #282F35;
+    letter-spacing: 3px;
+    line-height: 82px;
+
+    @include sp {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 200px;
+        height: 5px;
+        margin-left: 30px;
+        background-color: #282F35;
+        vertical-align: middle;
+
+        @include sp {
+            width: 90px;
+        }
+    }
+}
+
+.section-footer {
+    margin-top: 70px;
+    font: normal normal bold 90px/29px Noto Serif;
+    letter-spacing: 4.5px;
+    line-height: 122px;
+    color: #1717170D;
+
+    @include sp {
+        font-size: 40px;
+        margin-top: 40px;
+        line-height: 55px;
+    }
+
+}
+
+.btn {
+    display: block;
+    width: 235px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #F7D43F;
+    font: normal normal bold 16px/30px Noto Serif;
+    letter-spacing: 0.8px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 6px #1B1310;
+}
+
+
+// 各種ページ
+.page-title {
+    padding-top: 186px;
+    font: italic normal bold 60px/48px Noto Serif;
+    color: #fff;
+    letter-spacing: 6px;
+    line-height: 82px;
+    text-align: center;
+    
+    @include sp {
+        padding-top: 175px;
+        font-size: 30px;
+        line-height: 41px;
+    }
+}
+
+.page-title-bottom {
+    margin-top: 15px;
+    font: normal normal bold 90px/150px Noto Serif JP;
+    letter-spacing: 4.5px;
+    line-height: 130px;
+    color: #fff;
+    opacity: 0.05;
+
+    @include sp {
+        margin-top: 40px;
+        font-size: 40px;
+        line-height: 64px;
+    }
+}
